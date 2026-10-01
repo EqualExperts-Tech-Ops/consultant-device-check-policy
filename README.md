@@ -16,6 +16,7 @@ This repo is public so that the app can fetch it without signing in.
 | Field | Meaning |
 | --- | --- |
 | `version` | Format of this file. Must be `1`; the app ignores any other value. |
+| `deviceCheckLatest` | The latest Device Check release, as `x.y.z`. Written by the release workflow in consultant-device-check, not by hand: an installed app older than this updates itself straight after its next check, instead of waiting for its six-hourly update check. |
 | `gitMinimum` | Git older than this fails. A security floor, not "latest": raise it when Git ships a security release. On Linux, a distribution-packaged Git is judged by the package manager instead, because distributions backport fixes. |
 | `dockerEngineMinimum` | Docker Engine (or the CLI, when the engine is not running) older than this fails. |
 | `dotnetFrameworkMinimum` | Windows: .NET Framework older than this fails. |
