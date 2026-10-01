@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "deviceCheckLatest": "0.0.0",
+  "deviceCheckLatest": "1.0.0",
   "gitMinimum": "2.50.1",
   "dockerEngineMinimum": "27.1.1",
   "dotnetFrameworkMinimum": "4.6.2",
