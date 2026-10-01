@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "gitMinimum": "2.50.1",
+  "dockerEngineMinimum": "27.1.1",
+  "dotnetFrameworkMinimum": "4.6.2",
+  "visualCppFirstSupportedYear": 2015,
+  "windowsUpdateIgnore": [
+    "Security Intelligence Update"
+  ]
+}
