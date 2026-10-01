@@ -10,6 +10,7 @@ file=${1:-policy.json}
 jq -e '
   def version: type == "string" and test("^[0-9]+(\\.[0-9]+)*$");
   .version == 1
+  and (.deviceCheckLatest | type == "string" and test("^[0-9]+\\.[0-9]+\\.[0-9]+$"))
   and (.gitMinimum | version)
   and (.dockerEngineMinimum | version)
   and (.dotnetFrameworkMinimum | version)
