@@ -8,6 +8,7 @@ failures=0
 
 valid='{
   "version": 1,
+  "deviceCheckLatest": "1.2.0",
   "gitMinimum": "2.50.1",
   "dockerEngineMinimum": "27.1.1",
   "dotnetFrameworkMinimum": "4.6.2",
@@ -30,6 +31,9 @@ expect() {
 expect accepted "the seed policy" '.'
 expect accepted "an empty ignore list" '.windowsUpdateIgnore = []'
 expect rejected "version 2" '.version = 2'
+expect rejected "missing deviceCheckLatest" 'del(.deviceCheckLatest)'
+expect rejected "a two-part deviceCheckLatest" '.deviceCheckLatest = "1.2"'
+expect rejected "a prerelease deviceCheckLatest" '.deviceCheckLatest = "1.2.0-beta.1"'
 expect rejected "missing gitMinimum" 'del(.gitMinimum)'
 expect rejected "missing windowsUpdateIgnore" 'del(.windowsUpdateIgnore)'
 expect rejected "a version with a suffix" '.dockerEngineMinimum = "27.1.1-rc1"'
