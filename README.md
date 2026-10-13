@@ -21,6 +21,7 @@ This repo is public so that the app can fetch it without signing in.
 | `dockerEngineMinimum` | Docker Engine (or the CLI, when the engine is not running) older than this fails. |
 | `dotnetFrameworkMinimum` | Windows: .NET Framework older than this fails. |
 | `visualCppFirstSupportedYear` | Windows: Visual C++ runtimes from before this year fail as end-of-life. |
+| `macosLatestMajor` | The newest major version of macOS, as a whole number (`27`). A Mac passes on the latest release of this version or of the one before it; anything older fails. Raise it when Apple ships a new major version. |
 | `windowsUpdateIgnore` | Windows: pending updates whose title contains any of these are not reported. Defender definitions are here because Defender installs them itself, several times a day. |
 
 Every field is required. If the file is missing a field, has a malformed value, or cannot

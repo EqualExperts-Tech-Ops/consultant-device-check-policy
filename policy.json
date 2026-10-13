@@ -5,6 +5,7 @@
   "dockerEngineMinimum": "27.1.1",
   "dotnetFrameworkMinimum": "4.6.2",
   "visualCppFirstSupportedYear": 2015,
+  "macosLatestMajor": 27,
   "windowsUpdateIgnore": [
     "Security Intelligence Update"
   ]
