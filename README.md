@@ -20,6 +20,9 @@ This repo is public so that the app can fetch it without signing in.
 | `gitMinimum` | Git older than this fails. A security floor, not "latest": raise it when Git ships a security release. On Linux, a distribution-packaged Git is judged by the package manager instead, because distributions backport fixes. |
 | `dockerEngineMinimum` | Docker Engine (or the CLI, when the engine is not running) older than this fails. |
 | `dotnetFrameworkMinimum` | Windows: .NET Framework older than this fails. |
+| `dotnetMinimumChannel` | .NET (not Framework) runtimes and SDKs from a channel older than this fail, even when Microsoft's release list cannot be fetched. Online, any end-of-life channel fails regardless. |
+| `pythonMinimumCycle` | Python from a release cycle older than this fails when the end-of-life list cannot be fetched. Online, any end-of-life cycle fails. Raise it each October when a cycle reaches end-of-life. |
+| `officeMacMinimum` | macOS: Word, Excel, PowerPoint, Outlook and OneNote older than this fail when Microsoft AutoUpdate's feed cannot be fetched. Online, anything older than the feed's latest fails. |
 | `visualCppFirstSupportedYear` | Windows: Visual C++ runtimes from before this year fail as end-of-life. |
 | `windowsUpdateIgnore` | Windows: pending updates whose title contains any of these are not reported. Defender definitions are here because Defender installs them itself, several times a day. |
 

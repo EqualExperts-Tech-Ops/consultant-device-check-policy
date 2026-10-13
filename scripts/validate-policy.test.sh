@@ -12,6 +12,9 @@ valid='{
   "gitMinimum": "2.50.1",
   "dockerEngineMinimum": "27.1.1",
   "dotnetFrameworkMinimum": "4.6.2",
+  "dotnetMinimumChannel": "8.0",
+  "pythonMinimumCycle": "3.11",
+  "officeMacMinimum": "16.110",
   "visualCppFirstSupportedYear": 2015,
   "windowsUpdateIgnore": ["Security Intelligence Update"]
 }'
@@ -35,6 +38,11 @@ expect rejected "missing deviceCheckLatest" 'del(.deviceCheckLatest)'
 expect rejected "a two-part deviceCheckLatest" '.deviceCheckLatest = "1.2"'
 expect rejected "a prerelease deviceCheckLatest" '.deviceCheckLatest = "1.2.0-beta.1"'
 expect rejected "missing gitMinimum" 'del(.gitMinimum)'
+expect rejected "missing dotnetMinimumChannel" 'del(.dotnetMinimumChannel)'
+expect rejected "missing pythonMinimumCycle" 'del(.pythonMinimumCycle)'
+expect rejected "missing officeMacMinimum" 'del(.officeMacMinimum)'
+expect rejected "a python cycle as a number" '.pythonMinimumCycle = 3.11'
+expect rejected "a .NET channel with a suffix" '.dotnetMinimumChannel = "8.0-preview"'
 expect rejected "missing windowsUpdateIgnore" 'del(.windowsUpdateIgnore)'
 expect rejected "a version with a suffix" '.dockerEngineMinimum = "27.1.1-rc1"'
 expect rejected "a version as a number" '.dotnetFrameworkMinimum = 4.6'
