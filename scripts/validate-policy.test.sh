@@ -15,6 +15,7 @@ valid='{
   "dotnetMinimumChannel": "8.0",
   "pythonMinimumCycle": "3.11",
   "officeMacMinimum": "16.110",
+  "paintMinimum": "11.2605.91.0",
   "visualCppFirstSupportedYear": 2015,
   "windowsUpdateIgnore": ["Security Intelligence Update"]
 }'
@@ -41,6 +42,8 @@ expect rejected "missing gitMinimum" 'del(.gitMinimum)'
 expect rejected "missing dotnetMinimumChannel" 'del(.dotnetMinimumChannel)'
 expect rejected "missing pythonMinimumCycle" 'del(.pythonMinimumCycle)'
 expect rejected "missing officeMacMinimum" 'del(.officeMacMinimum)'
+expect rejected "missing paintMinimum" 'del(.paintMinimum)'
+expect rejected "a Paint minimum that is not a version" '.paintMinimum = "latest"'
 expect rejected "a python cycle as a number" '.pythonMinimumCycle = 3.11'
 expect rejected "a .NET channel with a suffix" '.dotnetMinimumChannel = "8.0-preview"'
 expect rejected "missing windowsUpdateIgnore" 'del(.windowsUpdateIgnore)'
