@@ -1,9 +1,12 @@
 {
   "version": 1,
-  "deviceCheckLatest": "1.6.0",
+  "deviceCheckLatest": "1.7.2",
   "gitMinimum": "2.50.1",
   "dockerEngineMinimum": "27.1.1",
   "dotnetFrameworkMinimum": "4.6.2",
+  "dotnetMinimumChannel": "8.0",
+  "pythonMinimumCycle": "3.11",
+  "officeMacMinimum": "16.110",
   "visualCppFirstSupportedYear": 2015,
   "macosLatestMajor": 27,
   "windowsUpdateIgnore": [
