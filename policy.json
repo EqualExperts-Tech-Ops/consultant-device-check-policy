@@ -7,6 +7,7 @@
   "dotnetMinimumChannel": "8.0",
   "pythonMinimumCycle": "3.11",
   "officeMacMinimum": "16.110",
+  "paintMinimum": "11.2605.91.0",
   "visualCppFirstSupportedYear": 2015,
   "windowsUpdateIgnore": [
     "Security Intelligence Update"

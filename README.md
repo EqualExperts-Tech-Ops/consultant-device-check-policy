@@ -23,6 +23,7 @@ This repo is public so that the app can fetch it without signing in.
 | `dotnetMinimumChannel` | .NET (not Framework) runtimes and SDKs from a channel older than this fail, even when Microsoft's release list cannot be fetched. Online, any end-of-life channel fails regardless. |
 | `pythonMinimumCycle` | Python from a release cycle older than this fails when the end-of-life list cannot be fetched. Online, any end-of-life cycle fails. Raise it each October when a cycle reaches end-of-life. |
 | `officeMacMinimum` | macOS: Word, Excel, PowerPoint, Outlook and OneNote older than this fail when Microsoft AutoUpdate's feed cannot be fetched. Online, anything older than the feed's latest fails. |
+| `paintMinimum` | Windows: Microsoft Paint (a Store app) older than this fails. The Store publishes no version feed, so raise it when Microsoft fixes a Paint vulnerability: the fixed build is under Microsoft Paint in the CVE's Security Update Guide entry. `11.2605.91.0` fixed CVE-2026-83844. |
 | `visualCppFirstSupportedYear` | Windows: Visual C++ runtimes from before this year fail as end-of-life. |
 | `windowsUpdateIgnore` | Windows: pending updates whose title contains any of these are not reported. Defender definitions are here because Defender installs them itself, several times a day. |
 
