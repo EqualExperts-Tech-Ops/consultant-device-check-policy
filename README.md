@@ -24,6 +24,7 @@ This repo is public so that the app can fetch it without signing in.
 | `pythonMinimumCycle` | Python from a release cycle older than this fails when the end-of-life list cannot be fetched. Online, any end-of-life cycle fails. Raise it each October when a cycle reaches end-of-life. |
 | `officeMacMinimum` | macOS: Word, Excel, PowerPoint, Outlook and OneNote older than this fail when Microsoft AutoUpdate's feed cannot be fetched. Online, anything older than the feed's latest fails. |
 | `visualCppFirstSupportedYear` | Windows: Visual C++ runtimes from before this year fail as end-of-life. |
+| `macosLatestMajor` | The newest major version of macOS, as a whole number (`27`). A Mac passes on the latest release of this version or of the one before it; anything older fails. Raise it when Apple ships a new major version. |
 | `windowsUpdateIgnore` | Windows: pending updates whose title contains any of these are not reported. Defender definitions are here because Defender installs them itself, several times a day. |
 
 Every field is required. If the file is missing a field, has a malformed value, or cannot

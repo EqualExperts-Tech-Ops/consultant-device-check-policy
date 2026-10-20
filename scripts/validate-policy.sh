@@ -18,6 +18,7 @@ jq -e '
   and (.pythonMinimumCycle | version)
   and (.officeMacMinimum | version)
   and (.visualCppFirstSupportedYear | type == "number" and . >= 1000 and . <= 9999 and floor == .)
+  and (.macosLatestMajor | type == "number" and . >= 1 and floor == .)
   and (.windowsUpdateIgnore | type == "array" and all(type == "string" and length > 0))
 ' "$file" >/dev/null || {
   echo "$file is not a policy Device Check can use; see README.md" >&2
@@ -25,7 +26,7 @@ jq -e '
 }
 
 # device-check.sh reads fields with sed, one line at a time.
-for field in version gitMinimum dockerEngineMinimum dotnetFrameworkMinimum dotnetMinimumChannel pythonMinimumCycle officeMacMinimum visualCppFirstSupportedYear; do
+for field in version gitMinimum dockerEngineMinimum dotnetFrameworkMinimum dotnetMinimumChannel pythonMinimumCycle officeMacMinimum visualCppFirstSupportedYear macosLatestMajor; do
   [ "$(grep -c "\"$field\"" "$file")" -eq 1 ] || {
     echo "$file: \"$field\" must appear on exactly one line" >&2
     exit 1

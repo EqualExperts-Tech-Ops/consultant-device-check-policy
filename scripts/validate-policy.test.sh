@@ -16,6 +16,7 @@ valid='{
   "pythonMinimumCycle": "3.11",
   "officeMacMinimum": "16.110",
   "visualCppFirstSupportedYear": 2015,
+  "macosLatestMajor": 27,
   "windowsUpdateIgnore": ["Security Intelligence Update"]
 }'
 
@@ -49,6 +50,9 @@ expect rejected "a version as a number" '.dotnetFrameworkMinimum = 4.6'
 expect rejected "a two-digit year" '.visualCppFirstSupportedYear = 15'
 expect rejected "a year as a string" '.visualCppFirstSupportedYear = "2015"'
 expect rejected "a blank ignore entry" '.windowsUpdateIgnore = [""]'
+expect rejected "missing macosLatestMajor" 'del(.macosLatestMajor)'
+expect rejected "a macosLatestMajor as a string" '.macosLatestMajor = "27"'
+expect rejected "a macosLatestMajor with a minor version" '.macosLatestMajor = 27.1'
 
 printf 'not json' >"$tmp/policy.json"
 if bash "$here/validate-policy.sh" "$tmp/policy.json" >/dev/null 2>&1; then
