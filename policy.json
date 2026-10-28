@@ -8,6 +8,7 @@
   "pythonMinimumCycle": "3.11",
   "officeMacMinimum": "16.110",
   "visualCppFirstSupportedYear": 2015,
+  "macosLatestMajor": 27,
   "windowsUpdateIgnore": [
     "Security Intelligence Update"
   ]
